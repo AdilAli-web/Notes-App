@@ -1,11 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
-// import { use } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+
 import { toast } from 'react-toastify';
 
 
-// const navigate = useNavigate();
+
 const initialState = {
   Pastes: localStorage.getItem("Pastes") ? JSON.parse(localStorage.getItem("Pastes")) : []
 }

@@ -45,17 +45,20 @@ function Home() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl w-full bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 space-y-6">
+                <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-6">
+          {pasteId ? 'Update Your Paste' : 'Create a New Paste'}
+        </h2>
         <input
-          className='w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+                    className='w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200 ease-in-out transform focus:scale-[1.01]'
           type="text"
           value={title}
           placeholder='Create a new paste'
           onChange={(e) => setTitle(e.target.value)}
         />
         <textarea
-          className='w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+                    className='w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200 ease-in-out transform focus:scale-[1.01]'
           placeholder='Enter your content'
           value={value}
           onChange={(e) => setValue(e.target.value)}
@@ -63,7 +66,7 @@ function Home() {
         />
         <button
           onClick={CreatePaste}
-          className='w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                    className='w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-1 active:scale-95'
         >
           {pasteId ? 'Update Paste' : 'Create Paste'}
         </button>
