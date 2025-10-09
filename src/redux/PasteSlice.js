@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
+
 import { toast } from 'react-toastify';
 
-// import toast from 'react-toastify';
+
 
 const initialState = {
   Pastes: localStorage.getItem("Pastes") ? JSON.parse(localStorage.getItem("Pastes")) : []
@@ -39,12 +40,15 @@ const PasteSlice = createSlice({
         state.Pastes[index] = paste;
         localStorage.setItem("Pastes", JSON.stringify(state.Pastes));
       }
+
       toast.success("Paste updated successfully")
+      // navigate('/Pastes/${paste._id}')
     },
     resetAllPaste: (state,) => {
       state.Pastes = [];
       localStorage.setItem("Pastes", JSON.stringify(state.Pastes));
     },
+
 
   }
 })
