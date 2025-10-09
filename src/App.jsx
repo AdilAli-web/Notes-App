@@ -15,12 +15,12 @@ function App() {
 
       </div>
     },
-    { path: "/home", element: <div><Navbar /> <Home /></div> },
+    // { path: "/", element: <div><Navbar /> <Home /></div> },
     { path: "/Pastes/:id", element: <div> <Navbar /> <ViewPaste /></div> }
 
   ])
   return (
-    <div>
+    <div >
       {/* <Navbar /> */}
       <RouterProvider router={routers} />
 

@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-a.active {
-  color: rgb(123, 213, 58);
+body.light {
+  background-color: #f9f9f9;
+  color: #222;
 }
-a.pending {
-  color: blue;
-}
-a.transitioning {
-  view-transition-name: my-transition;
+
+/* Dark mode */
+body.dark {
+  background-color: #1a1a1a;
+  color: #f9f9f9;
 }
