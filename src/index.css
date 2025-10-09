@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active {
+  color: rgb(123, 213, 58);
+}
+a.pending {
+  color: blue;
+}
+a.transitioning {
+  view-transition-name: my-transition;
+}
